@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Gameroom.ListEntryPage">
+             x:Class="Gameroom.ListEntryPage"
+             BackgroundColor="White">
+           
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Adauga un Review"
  Clicked="OnShopListAddedClicked" />
@@ -12,7 +14,7 @@
         <ListView.ItemTemplate>
             <DataTemplate>
                 <TextCell Text="{Binding Description}"
- Detail="{Binding Date}" />
+ Detail="{Binding Name}" DetailColor="Black" TextColor="Purple" />
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>

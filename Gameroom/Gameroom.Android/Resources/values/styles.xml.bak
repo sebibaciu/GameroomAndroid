@@ -6,9 +6,11 @@
     <!-- If you want to override anything you can do that here. -->
     <!-- Underneath are a couple of entries to get you started. -->
 <item name="android:statusBarColor">#800080</item> 
+<item name="android:colorPrimary">#800080</item> 
+<item name="android:colorPrimaryDark">#800080</item> 
     <!-- Set theme colors from https://aka.ms/material-colors -->
     <!-- colorPrimary is used for the default action bar background -->
- <item name="colorPrimary">#800080</item>
+    <!--<item name="colorPrimary">#2196F3</item>-->
     <!-- colorPrimaryDark is used for the status bar -->
     <!--<item name="colorPrimaryDark">#1976D2</item>-->
     <!-- colorAccent is used as the default value for colorControlActivated

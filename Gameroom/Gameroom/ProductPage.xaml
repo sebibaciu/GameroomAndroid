@@ -26,7 +26,7 @@ Clicked="OnDeleteButtonClicked"/>
  ItemSelected="OnListViewItemSelected">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <TextCell Text="{Binding Description}" />
+                            <TextCell Text="{Binding Description}" TextColor="Purple"/>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
