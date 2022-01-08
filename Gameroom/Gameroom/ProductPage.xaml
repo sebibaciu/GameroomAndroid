@@ -1,31 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Gameroom.ListPage">
-    <StackLayout Margin="20">
-            <Editor Placeholder="Enter the description of the shopping list"
-Text="{Binding Description}"
-HeightRequest="100" />
-            <Button Text="Add/Choose Item to buy" Clicked="OnChooseButtonClicked"/>
+             x:Class="Gameroom.ProductPage">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <Editor Placeholder="Enter product name" Margin="20"
+ Text="{Binding Description}"
+ HeightRequest="50" />
             <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Button Text="Save"
-Clicked="OnSaveButtonClicked" />
+ Clicked="OnSaveButtonClicked" />
                 <Button Grid.Column="1"
-Text="Delete"
+ Text="Delete"
 Clicked="OnDeleteButtonClicked"/>
-                <ListView Grid.Row="1" Grid.ColumnSpan="2" x:Name="listView"
-Margin="20">
+                <ListView Grid.Row="1" x:Name="listView"
+ Margin="20"
+ ItemSelected="OnListViewItemSelected">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <TextCell Detail="{Binding Description}" />
+                            <TextCell Text="{Binding Description}" />
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
             </Grid>
-        </StackLayout>
 
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

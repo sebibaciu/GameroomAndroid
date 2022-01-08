@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Gameroom.ListEntryPage">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add Shopping List"
+        <ToolbarItem Text="Adauga un Review"
  Clicked="OnShopListAddedClicked" />
     </ContentPage.ToolbarItems>
     <ListView x:Name="listView"

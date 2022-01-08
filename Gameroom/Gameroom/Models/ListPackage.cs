@@ -6,12 +6,12 @@ using SQLiteNetExtensions.Attributes;
 
 namespace Gameroom.Models
 {
-    public class Package
+    public class ListPackage
     {
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
-        public string Description { get; set; }
-        [OneToMany]
-        public List<ListPackage> ListPackage { get; set; }
+        [ForeignKey(typeof(ReviewList))]
+        public int ReviewListID { get; set; }
+        public int PackageID { get; set; }
     }
 }

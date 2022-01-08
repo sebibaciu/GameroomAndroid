@@ -30,5 +30,18 @@ namespace Gameroom
             await App.Database.DeleteShopListAsync(slist);
             await Navigation.PopAsync();
         }
+        async void OnChooseButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ProductPage((ReviewList)this.BindingContext)
+            {
+                BindingContext = new Package()
+            });
+        }
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            var shopl = (ReviewList)BindingContext;
+            listView.ItemsSource = await App.Database.GetListProductsAsync(shopl.ID);
+        }
     }
 }
