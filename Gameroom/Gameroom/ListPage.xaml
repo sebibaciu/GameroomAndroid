@@ -2,25 +2,37 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Gameroom.ListPage"
+             BackgroundColor="#30104b"
              >
     <StackLayout Margin="20">
-        <Label TextColor="Black">Numele tau:</Label>
-        <Editor Placeholder="sau Gamertag-ul tau ;)"
+        <Label TextColor="White">Numele tau:</Label>
+        <Editor 
+            TextColor="White"
             Text="{Binding Name}"
             HeightRequest="100" />
-        <Label TextColor="Black">Spune-ne cateva cuvinte despre experienta ta la gameroom™:</Label>
-        <Editor Placeholder="Parerea ta"
+        <Label TextColor="White">Spune-ne cateva cuvinte despre experienta ta la gameroom™:</Label>
+        <Editor 
+            TextColor="White"
                 Text="{Binding Description}"
                 HeightRequest="100" />
-        <Button Text="Pachetul Ales de tine" Clicked="OnChooseButtonClicked"/>
-            <Grid>
+        <Button 
+            TextColor="White"
+            BackgroundColor="#de013f"
+            Text="Pachetul Ales de tine" Clicked="OnChooseButtonClicked"/>
+        <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Button Text="Trimite"
+                <Button 
+                    BackgroundColor="#de013f"
+                    TextColor="White"
+                    Text="Trimite"
 Clicked="OnSaveButtonClicked" />
-                <Button Grid.Column="1"
+                <Button
+                    BackgroundColor="#de013f"
+                    TextColor="White"
+                    Grid.Column="1"
 Text="Sterge"
 Clicked="OnDeleteButtonClicked"/>
             <ListView Grid.Row="1" Grid.ColumnSpan="2" x:Name="listView"
