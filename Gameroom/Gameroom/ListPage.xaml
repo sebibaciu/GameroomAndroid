@@ -4,15 +4,15 @@
              x:Class="Gameroom.ListPage"
              >
     <StackLayout Margin="20">
-        <Label>Numele tau</Label>
-        <Editor Placeholder="Introdu numele si prenumele tau"
-Text="{Binding Name}"
-HeightRequest="100" />
-        <Label>Spune-ne cateva cuvinte despre experienta ta la gameroom™ </Label>
+        <Label TextColor="Black">Numele tau:</Label>
+        <Editor Placeholder="sau Gamertag-ul tau ;)"
+            Text="{Binding Name}"
+            HeightRequest="100" />
+        <Label TextColor="Black">Spune-ne cateva cuvinte despre experienta ta la gameroom™:</Label>
         <Editor Placeholder="Parerea ta"
-Text="{Binding Description}"
-HeightRequest="100" />
-            <Button Text="Pachetul Ales de tine" Clicked="OnChooseButtonClicked"/>
+                Text="{Binding Description}"
+                HeightRequest="100" />
+        <Button Text="Pachetul Ales de tine" Clicked="OnChooseButtonClicked"/>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
