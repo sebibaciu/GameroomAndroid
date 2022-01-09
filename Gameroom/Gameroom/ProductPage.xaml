@@ -1,10 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Gameroom.ProductPage">
+             x:Class="Gameroom.ProductPage"
+             BackgroundColor="#30104b">
     <ContentPage.Content>
         <StackLayout Margin="20">
-            <Editor Placeholder="Enter product name" Margin="20"
+            <Label TextColor="White">Selecteaza pachetul la care vrei sa ii faci review.</Label>
+            <Editor TextColor="White" PlaceholderColor="Gray" Placeholder="Introdu numele pachetului" Margin="20"
  Text="{Binding Description}"
  HeightRequest="50" />
             <Grid>
@@ -16,17 +18,23 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Button Text="Save"
- Clicked="OnSaveButtonClicked" />
-                <Button Grid.Column="1"
- Text="Delete"
-Clicked="OnDeleteButtonClicked"/>
+                <Button                   
+                    BackgroundColor="#de013f"
+                    TextColor="White" 
+                    Text="Save"
+                    Clicked="OnSaveButtonClicked" />
+                <Button 
+                    BackgroundColor="#de013f"
+                    TextColor="White"
+                    Grid.Column="1"
+                    Text="Delete"
+                    Clicked="OnDeleteButtonClicked"/>
                 <ListView Grid.Row="1" x:Name="listView"
- Margin="20"
- ItemSelected="OnListViewItemSelected">
+                    Margin="20"
+                    ItemSelected="OnListViewItemSelected">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <TextCell Text="{Binding Description}" TextColor="Purple"/>
+                            <TextCell Text="{Binding Description}" TextColor="White"/>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>

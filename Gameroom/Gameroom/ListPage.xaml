@@ -29,21 +29,20 @@
                     TextColor="White"
                     Text="Trimite"
 Clicked="OnSaveButtonClicked" />
-                <Button
+            <Button
                     BackgroundColor="#de013f"
                     TextColor="White"
                     Grid.Column="1"
 Text="Sterge"
 Clicked="OnDeleteButtonClicked"/>
-            <ListView Grid.Row="1" Grid.ColumnSpan="2" x:Name="listView"
-Margin="20">
+            <ListView 
+                Grid.Row="1" Grid.ColumnSpan="2" x:Name="listView" Margin="10">
                 <ListView.ItemTemplate>
-      
-                        <DataTemplate>
-                            <TextCell Detail="{Binding Description}" />
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                    <DataTemplate>
+                        <TextCell DetailColor="White" Detail="{Binding Description}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
             </Grid>
         </StackLayout>
 
